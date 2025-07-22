@@ -10,5 +10,8 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
+<<<<<<< HEAD
             
    
+=======
+>>>>>>> 43d69c46bd09440e9d9f007b3137d6ff9ffc9be3

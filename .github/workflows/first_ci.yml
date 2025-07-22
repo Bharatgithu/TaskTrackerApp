@@ -1,17 +1,36 @@
 name: First CI Workflows
+
+
 on:
     push:
         branches: [main, dev, New_Feature]
     pull_request:
         branches: [main, dev, New_Feature]
+
+
 jobs:
     build:
         runs-on: ubuntu-latest
+
+
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
-<<<<<<< HEAD
-            
-   
-=======
->>>>>>> 43d69c46bd09440e9d9f007b3137d6ff9ffc9be3
+
+
+            - name: Set Node.js version
+              uses: actions/setup-node@v2
+              with: 
+                  node-version: '18'
+
+
+            - name: Install dependencies
+              run: npm install
+
+
+            - name: Run tests
+              run: npm test
+
+
+            - name: Build project
+              run: npm run build

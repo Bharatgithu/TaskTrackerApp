@@ -16,9 +16,7 @@ jobs:
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
-      - name: Build (optional)
-        run: echo "No build step for static HTML"  # You can remove or replace this
-
+      
       - name: Deploy to Netlify
         run: |
           netlify deploy --dir=./Frontend_Dev --prod --site=$NETLIFY_SITE_ID
